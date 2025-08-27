@@ -10,16 +10,19 @@ namespace Ejercicio_1.Models
     {
         public string Patente { get; set; }
         public string Serie { get; set; }
+        public Persona Dueño { get; set; }
 
-        public RegistroVehiculo(string serie, string patente)
+        int i;
+        public RegistroVehiculo(string serie, string patente,Persona dueño)
         {
             Patente = patente;
             Serie = serie;
+            Dueño = dueño;
         }
         public string VerDetalle()
             
         {
-            return $"{Patente}-{Serie}";
+            return $"*{Patente}\r\n*{Serie}\r\n*{Dueño.NOMBRE}(Dni:{Dueño.DNI})";
         }
 
 

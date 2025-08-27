@@ -11,7 +11,7 @@ namespace Ejercicio_1.Models
         public int DNI { get; set; }
         public string NOMBRE { get; set; }
 
-        Persona(int dni, string nombre) 
+        public Persona(int dni, string nombre) 
         
         {
             DNI = dni;
